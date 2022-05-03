@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: hu.haizu.cogni.hypergraph.dsl.tests
+Bundle-ManifestVersion: 2
+Bundle-Name: hu.haizu.cogni.hypergraph.dsl.tests
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: hu.haizu.cogni.hypergraph.dsl.tests; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: hu.haizu.cogni.hypergraph.dsl,
+ hu.haizu.cogni.hypergraph.model,
+ org.junit.jupiter.api;bundle-version="[5.1.0,6.0.0)",
+ org.eclipse.xtext.testing,
+ org.eclipse.xtext.xbase.testing,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: hu.haizu.cogni.hypergraph.tests;x-internal=true

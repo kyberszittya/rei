@@ -1,0 +1,6 @@
+*.jar
+.launch/
+.setttings/
+xtend-gen/
+src-gen/
+target/

@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: hu.haizu.cogni.hypergraph.dsl
+Bundle-ManifestVersion: 2
+Bundle-Name: hu.haizu.cogni.hypergraph.dsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: hu.haizu.cogni.hypergraph.dsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: hu.haizu.cogni.hypergraph.model,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: hu.haizu.cogni.hypergraph.scoping,
+ hu.haizu.cogni.hypergraph.generator,
+ hu.haizu.cogni.hypergraph,
+ hu.haizu.cogni.hypergraph.serializer,
+ hu.haizu.cogni.hypergraph.validation,
+ hu.haizu.cogni.hypergraph.formatting2,
+ hu.haizu.cogni.hypergraph.services
+Import-Package: org.apache.log4j

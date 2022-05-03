@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="basicbuild" nsURI="http://haizu.hu/hypergraphmodel" nsPrefix="hypergraphmodel">
+  <eClassifiers xsi:type="ecore:EClass" name="HypergraphElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HyperGraphNode" abstract="true" eSuperTypes="#//HypergraphElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HyperGraphEdge" eSuperTypes="#//HypergraphElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operands" upperBound="-1"
+        eType="#//HyperGraphEdgeOperation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TerminalValue" abstract="true" eSuperTypes="#//HyperGraphNode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DoubleValue" eSuperTypes="#//TerminalValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerValue" eSuperTypes="#//TerminalValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringValue" eSuperTypes="#//TerminalValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HyperGraphEdgeOperation" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HyperGraphMultiSet" eSuperTypes="#//HyperGraphNode">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subelements" upperBound="-1"
+        eType="#//HypergraphElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Containment" eSuperTypes="#//HyperGraphEdgeOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//HyperGraphNode"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//HyperGraphEdgeOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//HyperGraphNode"/>
+  </eClassifiers>
+</ecore:EPackage>
